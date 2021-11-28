@@ -94,3 +94,18 @@ int main()
 
 	return 0;
 }
+
+
+
+input:
+4 4
+
+0 1
+0 2
+1 3
+2 3
+
+
+output expected:
+[0 1 3]
+[0 2 3] 
