@@ -23,6 +23,7 @@ int main()
 	int t;
 	cin >> t;
 
+
 	while (t--)
 	{
 		int a, b, p, q, m, n;
@@ -34,202 +35,198 @@ int main()
 		}
 		else
 		{
-			if (a == 1 || b == 1)
+		
+			if (a == 1)
 			{
-				if (a == 1)
+				if (p == 2 or m == 2)
 				{
-					if (p == 2 or m == 2)
+					if (p == 2)
 					{
-						if (p == 2)
+						if (abs(q - b) == 1)
 						{
-							if (abs(q - b) == 1)
-							{
-								ans = "NO";
-							}
-							else
-							{
-								if (n == b + 1 || n == b - 1 || n == q)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
-							}
+							ans = "NO";
 						}
 						else
 						{
-							if (abs(n - b) == 1)
+							if (n == b + 1 || n == b - 1 || n == q)
 							{
 								ans = "NO";
 							}
 							else
 							{
-								if (q == b + 1 || q == b - 1 || n == q)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
+								ans = "YES";
+								cout << ans << endl;
+								continue;
 							}
 						}
 					}
 					else
 					{
-						ans = "NO";
+						if (abs(n - b) == 1)
+						{
+							ans = "NO";
+						}
+						else
+						{
+							if (q == b + 1 || q == b - 1 || n == q)
+							{
+								ans = "NO";
+							}
+							else
+							{
+								ans = "YES";
+								cout << ans << endl;
+								continue;
+							}
+						}
 					}
 				}
-
-
-				if (b == 1)
+				else
 				{
-					if (q == 2 || n == 2)
+					ans = "NO";
+				}
+			}
+
+
+			if (b == 1)
+			{
+				if (q == 2 || n == 2)
+				{
+					if (q == 2)
 					{
-						if (q == 2)
+						if (abs(p - a) == 1)
 						{
-							if (abs(p - a) == 1)
-							{
-								ans = "NO";
-							}
-							else
-							{
-								if (m == a + 1 || m == a - 1 || m == p)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
-							}
+							ans = "NO";
 						}
 						else
 						{
-							if (abs(m - a) == 1)
+							if (m == a + 1 || m == a - 1 || m == p)
 							{
 								ans = "NO";
 							}
 							else
 							{
-								if (p == a + 1 || p == a - 1 || p == m)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
+								ans = "YES";
+								cout << ans << endl;
+								continue;
 							}
 						}
 					}
 					else
 					{
-						ans = "NO";
+						if (abs(m - a) == 1)
+						{
+							ans = "NO";
+						}
+						else
+						{
+							if (p == a + 1 || p == a - 1 || p == m)
+							{
+								ans = "NO";
+							}
+							else
+							{
+								ans = "YES";
+								cout << ans << endl;
+								continue;
+							}
+						}
+					}
+				}
+				else
+				{
+					ans = "NO";
+				}
+			}
+
+			if (b == 8)
+			{
+				if (q == 7 || n == 7)
+				{
+					if (q == 7)
+					{
+						if (abs(p - a) == 1)
+						{
+							ans = "NO";
+						}
+						else
+						{
+							if (m == a + 1 || m == a - 1 || m == p)
+							{
+								ans = "NO";
+							}
+							else
+							{
+								ans = "YES";
+								cout << ans << endl;
+								continue;
+							}
+						}
+					}
+					else
+					{
+						if (abs(m - a) == 1)
+						{
+							ans = "NO";
+						}
+						else
+						{
+							if (p == a + 1 || p == a - 1 || m == p)
+							{
+								ans = "NO";
+							}
+							else
+							{
+								ans = "YES";
+								cout << ans << endl;
+								continue;
+							}
+						}
 					}
 				}
 			}
-			else
+
+			if (a == 8)
 			{
-				if (a == 8)
+				if (p == 7 || m == 7)
 				{
-					if (p == 7 || m == 7)
+					if (p == 7)
 					{
-						if (p == 7)
+						if (abs(q - b) == 1)
 						{
-							if (abs(q - b) == 1)
-							{
-								ans = "NO";
-							}
-							else
-							{
-								if (n == b + 1 || n == b - 1 || n == q)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
-							}
+							ans = "NO";
 						}
 						else
 						{
-							if (abs(n - b) == 1)
+							if (n == b + 1 || n == b - 1 || n == q)
 							{
 								ans = "NO";
 							}
 							else
 							{
-								if (q == a + 1 || q == a - 1 || n == q)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
+								ans = "YES";
+								cout << ans << endl;
+								continue;
 							}
 						}
 					}
-				}
-
-				if (b == 8)
-				{
-					if (q == 7 || n == 7)
+					else
 					{
-						if (q == 7)
+						if (abs(n - b) == 1)
 						{
-							if (abs(p - a) == 1)
-							{
-								ans = "NO";
-							}
-							else
-							{
-								if (m == a + 1 || m == a - 1 || m == p)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
-							}
+							ans = "NO";
 						}
 						else
 						{
-							if (abs(m - a) == 1)
+							if (q == a + 1 || q == a - 1 || n == q)
 							{
 								ans = "NO";
 							}
 							else
 							{
-								if (p == a + 1 || p == a - 1 || m == p)
-								{
-									ans = "NO";
-								}
-								else
-								{
-									ans = "YES";
-									cout << ans << endl;
-									continue;
-								}
+								ans = "YES";
+								cout << ans << endl;
+								continue;
 							}
 						}
 					}
